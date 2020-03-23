@@ -45,10 +45,10 @@ print(r.html.absolute_links)
 ### 获取元素
 
 request-html支持CSS选择器和XPATH两种语法来选取HTML元素。首先先来看看CSS选择器语法，它需要使用HTML的find函数，该函数有5个参数，作用如下：
-\- selector，要用的CSS选择器；
-\- clean，布尔值，如果为真会忽略HTML中style和script标签造成的影响（原文是sanitize，大概这么理解）;
-\- containing，如果设置该属性，会返回包含该属性文本的标签；
-\- first，布尔值，如果为真会返回第一个元素，否则会返回满足条件的元素列表；
+\- selector，要用的CSS选择器；  
+\- clean，布尔值，如果为真会忽略HTML中style和script标签造成的影响（原文是sanitize，大概这么理解）;  
+\- containing，如果设置该属性，会返回包含该属性文本的标签；  
+\- first，布尔值，如果为真会返回第一个元素，否则会返回满足条件的元素列表；  
 \- _encoding，编码格式。
 
 下面是几个简单例子：
@@ -71,10 +71,10 @@ print(list(map(lambda x: x.text, r.html.find('div.content span'))))
 ```
 
 然后是XPATH语法，这需要另一个函数xpath的支持，它有4个参数如下：
-\- selector，要用的XPATH选择器；
-\- clean，布尔值，如果为真会忽略HTML中style和script标签造成的影响（原文是sanitize，大概这么理解）;
-\- first，布尔值，如果为真会返回第一个元素，否则会返回满足条件的元素列表；
-\- _encoding，编码格式。
+\- selector，要用的XPATH选择器；  
+\- clean，布尔值，如果为真会忽略HTML中style和script标签造成的影响（原文是sanitize，大概这么理解）;  
+\- first，布尔值，如果为真会返回第一个元素，否则会返回满足条件的元素列表；  
+\- _encoding，编码格式。  
 
 还是上面的例子，不过这次使用XPATH语法：
 
@@ -166,13 +166,13 @@ Download may take a few minutes.
 ```
 
 render函数还有一些参数，顺便介绍一下（这些参数有的还有默认值，直接看源代码方法参数列表即可）：
-\- retries: 加载页面失败的次数
-\- script: 页面上需要执行的JS脚本（可选）
-\- wait: 加载页面钱的等待时间（秒），防止超时（可选）
-\- scrolldown: 页面向下滚动的次数
-\- sleep: 在页面初次渲染之后的等待时间
-\- reload: 如果为假，那么页面不会从浏览器中加载，而是从内存中加载
-\- keep_page: 如果为真，允许你用`r.html.page`访问页面
+\- retries: 加载页面失败的次数  
+\- script: 页面上需要执行的JS脚本（可选）  
+\- wait: 加载页面钱的等待时间（秒），防止超时（可选）  
+\- scrolldown: 页面向下滚动的次数  
+\- sleep: 在页面初次渲染之后的等待时间  
+\- reload: 如果为假，那么页面不会从浏览器中加载，而是从内存中加载  
+\- keep_page: 如果为真，允许你用`r.html.page`访问页面  
 
 比如说简书的用户页面上用户的文章列表就是一个异步加载的例子，初始只显示最近几篇文章，如果想爬取所有文章，就需要使用scrolldown配合sleep参数模拟下滑页面，促使JS代码加载所有文章。
 
