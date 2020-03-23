@@ -1,5 +1,4 @@
-在Python 3.6版本及以上，引入了一个新的库：requests_html 。说实话，这个库是真的方便使用，它可以将爬虫变得很简单，话不多说，直接上手。我们想要爬取下面这个网站的代码部分：
-https://cpppatterns.com/patterns/copy-range-of-elements.html  
+在Python 3.6版本及以上，引入了一个新的库：requests_html 。说实话，这个库是真的方便使用，它可以将爬虫变得很简单，话不多说，直接上手。我们想要爬取下面这个网站的代码部分：[copy-range-of-elements](https://cpppatterns.com/patterns/copy-range-of-elements.html)  
 
 （代码部分指的是如下图黑框中的C++代码）  
 [](https://img-blog.csdnimg.cn/20190123205804938.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80Mzc5MDU2MA==,size_16,color_FFFFFF,t_70)
