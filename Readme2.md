@@ -16,7 +16,7 @@ r = session.get(url)
 ```
 
 3.开始网页抓包，我们来到上面所说的网站后，按F12，会弹出如下图：
-!()[https://img-blog.csdnimg.cn/20190123211844445.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80Mzc5MDU2MA==,size_16,color_FFFFFF,t_70]
+![](https://img-blog.csdnimg.cn/20190123211844445.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80Mzc5MDU2MA==,size_16,color_FFFFFF,t_70)
 
 点击Elements，这是这个网页的前端代码，我们再点击下图红框的地方（左上角）：
 ![](https://img-blog.csdnimg.cn/20190123212012604.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80Mzc5MDU2MA==,size_16,color_FFFFFF,t_70)
@@ -83,13 +83,14 @@ for result in r_code:
     mylist=[]
 ```
 
-我们可以在控制台看到输出整个黑框中的代码了
+我们可以在控制台看到输出整个黑框中的代码了  
+
 ![](https://img-blog.csdnimg.cn/2019012322321721.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80Mzc5MDU2MA==,size_16,color_FFFFFF,t_70)
 
-如果要爬取其他东西的话大致流程都是这样。
+如果要爬取其他东西的话大致流程都是这样。  
 
 5.完整代码
-
+```
 from requests_html import HTMLSession
   
 session = HTMLSession()
